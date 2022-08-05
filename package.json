@@ -1,0 +1,21 @@
+{
+  "name": "popart-stoplight-02-react",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Pop Art's development exercise: React portion.",
+  "author": "Dylan Hallstrom <dylan.hallstrom@pop-art.com>",
+  "license": "private",
+  "dependencies": {
+    "react": "17",
+    "react-dom": "17"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
