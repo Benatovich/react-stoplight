@@ -1,10 +1,26 @@
+/* APP */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /* HEADER */
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border-bottom: 2px solid black;
     background-color: tan;
+}
+
+.title-container {
+    margin: 5px;
+    justify-items: center;
+}
+
+.button-container {
+    margin: 5px;
 }
 
 /* STOPLIGHT */
@@ -13,7 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 140px;
     margin: 10px;
 }
 
