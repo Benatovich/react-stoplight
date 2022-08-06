@@ -1,4 +1,8 @@
 /* APP */
+.App {
+    /* background-color: navy;
+    height: max-content; */
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -11,7 +15,15 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 2px solid black;
-    background-color: tan;
+    /* background-color: tan; */
+}
+.header.dark {
+    background-color: black;
+    color: blanchedalmond;
+}
+.header.light {
+    background-color: blanchedalmond;
+    color: black;
 }
 
 .title-container {
@@ -20,7 +32,13 @@
 }
 
 .button-container {
-    margin: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    margin: 10px 0px;
 }
 
 /* STOPLIGHT */
@@ -31,6 +49,12 @@
     align-items: center;
     width: 140px;
     margin: 10px;
+}
+.stoplight.dark {
+    background-color: navy;
+}
+.stoplight.light {
+    background-color: peachpuff;
 }
 
 .signal {
