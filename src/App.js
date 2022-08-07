@@ -1,22 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './App.css'
 
-import Stoplight from './components/stoplight'
-import Header from './components/header'
-import { ContextProvider } from './context/Context'
+import Stoplight from './components/Stoplight'
+import Header from './components/Header'
+import Container from './components/Container'
+import { Context } from './context/Context'
+
+
 
 function App() {
+  const {darkMode} = useContext(Context);
 
     return (
-      <div className='App'>
-        <ContextProvider>
+        <div className={darkMode ? 'app dark' : 'app light'}>
           <Header />
-          <div className='container'>
-            <Stoplight id='stoplight1' />
-            <Stoplight id='stoplight2' />
-          </div>
-        </ContextProvider>
-      </div>
+          <Container />
+        </div>
     )
 }
 
