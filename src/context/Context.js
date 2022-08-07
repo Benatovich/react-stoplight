@@ -3,18 +3,21 @@ import React, { createContext, useState } from 'react';
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-    // const [raceModeAll, setRaceModeAll] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const [squidMode, setSquidMode] = useState(false);
 
-    // const toggleRaceModeAll = () => {
-    //     setRaceModeAll(!raceModeAll);
-    // };
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
     };
 
+    const toggleSquidMode = () => {
+        setSquidMode(!squidMode);
+    }
+
     return (
-        <Context.Provider value={{darkMode, toggleDarkMode}} >
+        <Context.Provider 
+            value={{darkMode, toggleDarkMode, 
+                squidMode, toggleSquidMode}} >
             {children}
         </Context.Provider>
     )

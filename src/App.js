@@ -1,9 +1,12 @@
 import React, { useContext } from 'react'
 import './App.css'
 
-import Stoplight from './components/stoplight'
-import Header from './components/header'
+import Stoplight from './components/Stoplight'
+import Header from './components/Header'
+import Container from './components/Container'
 import { Context } from './context/Context'
+
+
 
 function App() {
   const {darkMode} = useContext(Context);
@@ -11,10 +14,7 @@ function App() {
     return (
         <div className={darkMode ? 'app dark' : 'app light'}>
           <Header />
-          <div className='container'>
-            <Stoplight id='stoplight1' />
-            <Stoplight id='stoplight2' />
-          </div>
+          <Container />
         </div>
     )
 }

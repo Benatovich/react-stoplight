@@ -23,15 +23,12 @@
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid black;
-    /* background-color: tan; */
 }
 .header.dark {
     background-color: #6A2E35;
-    /* color: beige; */
 }
 .header.light {
     background-color: skyblue;
-    /* color: black; */
 }
 
 .title-container {
@@ -39,10 +36,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    text-align: center;
 }
 
 .title {
+    display: flex;
+    flex-direction: row;
     margin: 10px;
 }
 
@@ -53,8 +52,9 @@
 }
 
 .button {
-    padding: 1px;
+    padding: 6px;
     margin: 10px 0px;
+    border-radius: 6px;
 }
 
 /* STOPLIGHT */
@@ -65,12 +65,6 @@
     align-items: center;
     width: 140px;
     margin: 10px;
-}
-.stoplight.dark {
-    /* background-color: navy; */
-}
-.stoplight.light {
-    /* background-color: peachpuff; */
 }
 
 .flag-on {
@@ -93,7 +87,7 @@
     border-top: solid 5px black
 }
 .signal.yellow {
-
+/* if I get around to color customization, I'll need to use this again */
 }
 .signal.green {
     border-bottom: solid 5px black;
@@ -103,4 +97,11 @@ input[type=button] {
     padding: 6px;
     margin-top: 10px;
     width: 80px;
+}
+
+/* SQUIDGAME */
+.squid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
