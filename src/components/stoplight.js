@@ -8,7 +8,9 @@ import poplightOff from '../assets/poplight-off.png'
 
 export default function Stoplight({ id }) {
     const [color, setColor] = useState('red')
-    const {raceMode, darkMode} = useContext(Context);
+    const [raceMode, setRaceMode] = useState(false)
+    
+    const {darkMode} = useContext(Context);
 
     function handleClick() {
         if(raceMode === true) {
@@ -34,13 +36,19 @@ export default function Stoplight({ id }) {
         }
     }
 
+    function toggleRaceMode() {
+        setRaceMode(!raceMode)
+    }
+
   return (
     <div className={darkMode ? 'stoplight dark' : 'stoplight light'} id={id}>
+        <p className={raceMode ? 'flag-on' : 'flag-off'}>🏁RACE MODE🏁</p>
         <img className='red signal' alt='traffic signal light shaped like the Pop Art, Inc. logo' src={ color === 'red' ? poplightRed : poplightOff } />
         <img className='yellow signal' alt='traffic signal light shaped like the Pop Art, Inc. logo' src={ color === 'yellow' ? poplightYellow : poplightOff } />
         <img className='green signal' alt='traffic signal light shaped like the Pop Art, Inc. logo' src={ color === 'green' ? poplightGreen : poplightOff } />
 
         <input onClick={handleClick} type="button" className="button change" value="Change"></input>
+        <button onClick={toggleRaceMode} className="button racing" >Toggle Racing Mode</button>
     </div>
   )
 }

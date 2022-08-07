@@ -73,6 +73,14 @@
     /* background-color: peachpuff; */
 }
 
+.flag-on {
+    margin: 0 0 10px 0;
+}
+.flag-off {
+    margin: 0 0 10px 0;
+    visibility: hidden;
+}
+
 .signal {
     border-left: solid 5px black;
     border-right: solid 5px black;
