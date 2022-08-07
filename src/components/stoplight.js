@@ -38,6 +38,7 @@ export default function Stoplight({ id }) {
 
     function toggleRaceMode() {
         setRaceMode(!raceMode)
+        setColor('red')
     }
 
   return (
