@@ -86,9 +86,7 @@
 .signal.red {
     border-top: solid 5px black
 }
-.signal.yellow {
-/* if I get around to color customization, I'll need to use this again */
-}
+
 .signal.green {
     border-bottom: solid 5px black;
 }
@@ -107,17 +105,92 @@ input[type=button] {
 }
 
 /* CUSTOM PLAYGROUND */
+.playground {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 15px; */
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    width: 100%;
+}
+.top.dark {
+    background-color: darkgoldenrod;
+    color: black;
+}
+.top.light {
+    background-color: salmon;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.dropdown {
+    margin-top: 10px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 15px;
+}
+
 .custom-stoplight {
-    /* border: solid 2px black; */
     height: 240px;
     width: 80px;
     display: flex;
     flex-direction: column;
+    background-color: gray;
 }
 
 .custom-signal {
     width: 80px;
     height: 80px;
-    padding: 0;
-    margin: 0;
+}
+
+.right-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.color-wheel {
+    width: 100%;
+}
+
+.button.racing {
+    width: max-content;
+}
+
+.custom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 }
