@@ -6,8 +6,6 @@ import Header from './components/Header'
 import Container from './components/Container'
 import { Context } from './context/Context'
 
-
-
 function App() {
   const {darkMode} = useContext(Context);
 
