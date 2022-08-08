@@ -7,7 +7,8 @@
   "license": "private",
   "dependencies": {
     "react": "17",
-    "react-dom": "17"
+    "react-dom": "17",
+    "react-eyedrop": "^5.3.1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

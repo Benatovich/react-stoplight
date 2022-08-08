@@ -1,32 +1,196 @@
+/* APP */
+.app {
+    height: 1000px;
+}
+.app.dark {
+    background-color: #26413C;
+    color: skyblue;
+}
+.app.light {
+    background-color: beige;
+    color: black;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+.header.dark {
+    background-color: #6A2E35;
+}
+.header.light {
+    background-color: skyblue;
+}
+
+.title-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.button-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    padding: 6px;
+    margin: 10px 0px;
+    border-radius: 6px;
+}
+
+/* STOPLIGHT */
 .stoplight {
     float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    margin: 10px;
+}
+
+.flag-on {
+    margin: 0 0 10px 0;
+}
+.flag-off {
+    margin: 0 0 10px 0;
+    visibility: hidden;
 }
 
 .signal {
+    border-left: solid 5px black;
+    border-right: solid 5px black;
     width: 80px;
     height: 80px;
-    border-radius: 44px;
-    margin: 6px;
-    border: solid 5px black;
+    background-color: black;
 }
 
 .signal.red {
-    background-color: red;
-}
-.signal.yellow {
-    background-color: yellow;
-}
-.signal.green {
-    background-color: green;
+    border-top: solid 5px black
 }
 
-.signal.off {
-    background-color: darkgray;
+.signal.green {
+    border-bottom: solid 5px black;
 }
 
 input[type=button] {
     padding: 6px;
-    margin-left: 6px;
     margin-top: 10px;
     width: 80px;
+}
+
+/* SQUIDGAME */
+.squid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CUSTOM PLAYGROUND */
+.playground {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 15px; */
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    width: 100%;
+}
+.top.dark {
+    background-color: darkgoldenrod;
+    color: black;
+}
+.top.light {
+    background-color: salmon;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.dropdown {
+    margin-top: 10px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 15px;
+}
+
+.custom-stoplight {
+    height: 240px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.custom-signal {
+    width: 80px;
+    height: 80px;
+}
+
+.right-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.color-wheel {
+    width: 100%;
+}
+
+.button.racing {
+    width: max-content;
+}
+
+.custom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 }
