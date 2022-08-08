@@ -105,3 +105,19 @@ input[type=button] {
     flex-direction: column;
     align-items: center;
 }
+
+/* CUSTOM PLAYGROUND */
+.custom-stoplight {
+    /* border: solid 2px black; */
+    height: 240px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-signal {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
