@@ -1,22 +1,30 @@
 {
-  "name": "popart-stoplight-02-react",
-  "version": "2.0.0",
-  "private": true,
-  "description": "Pop Art's development exercise: React portion.",
-  "author": "Dylan Hallstrom <dylan.hallstrom@pop-art.com>",
-  "license": "private",
-  "dependencies": {
-    "react": "17",
-    "react-dom": "17",
-    "react-eyedrop": "^5.3.1"
-  },
-  "devDependencies": {
-    "react-scripts": "0.9.5"
+  "name": "poplight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "jest": {
+    "setupFiles": ["dotenv/config"],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect",
+      "<rootDir>/src/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "testEnvironment": "jsdom"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watch",
+    "start": "webpack serve --hot --mode development --devtool eval-source-map --open",
+    "start:watch": "npm run start",
+    "build": "webpack --devtool source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
 }
