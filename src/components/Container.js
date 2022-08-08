@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import Stoplight from './Stoplight'
 import { Context } from '../context/Context'
 import SquidGame from './SquidGame'
+import Custom from './Custom'
 
 export default function container() {
-    const {squidMode} = useContext(Context);
+    const {squidMode, customMode} = useContext(Context);
 
   return (
     <div className='container'>
@@ -12,8 +13,14 @@ export default function container() {
             <SquidGame />
             ) : (
             <div>
-                <Stoplight id='stoplight1' />
-                <Stoplight id='stoplight2' />
+              {customMode ? (
+                <Custom />
+              ) : (
+                <div>
+                  <Stoplight id='stoplight1' />
+                  <Stoplight id='stoplight2' />
+                </div>
+              )}
             </div>
         )}
     </div>
